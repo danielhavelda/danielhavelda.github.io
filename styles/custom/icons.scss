@@ -1,6 +1,10 @@
-.light-mode-icon {
+.icon {
   cursor: pointer;
   &:hover {
     stroke: var(--gray-300);
   }
+}
+
+.back-icon {
+  margin-right: 15px;
 }

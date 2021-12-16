@@ -1,5 +1,4 @@
 import classes from './Footer.module.scss';
-import { Sun } from 'react-feather';
 
 export default function Footer() {
   return (
@@ -16,7 +15,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <a href="https://github.com/danielhavelda/danielhavelda.github.io" className='text-gray-500'>View Source</a>
+          <a href="https://github.com/danielhavelda/danielhavelda.github.io" className='text-gray-500'>
+            View Source
+          </a>
         </div>
       </div>
     </footer>

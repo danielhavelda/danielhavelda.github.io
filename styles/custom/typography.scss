@@ -16,6 +16,10 @@ h3 {
   }
 }
 
+p {
+  font: 400 normal 1.125rem/1.85 "Karla", sans-serif;
+}
+
 @media (max-width: $breakpoint__sm) {
   h3.hero-heading {
     max-width: 100%;
