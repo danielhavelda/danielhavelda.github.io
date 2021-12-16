@@ -1,0 +1,11 @@
+:root {
+  --gray-100: #DCDCDC;
+  --gray-200: #929292;
+  --gray-300: #727272;
+  --gray-500: #5A5A5A;
+  --gray-700: #1B1D21;
+  --gray-800: #181A1D;
+
+  --gradient-pink-to-purple: linear-gradient( 109.6deg,  rgba(238,58,136,1) 11.2%, rgba(128,162,245,1) 91.1% );
+  --background-primary: linear-gradient(to right, var(--gray-700) 11%, var(--gray-800) 88%);
+}

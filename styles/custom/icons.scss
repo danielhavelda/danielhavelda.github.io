@@ -1,0 +1,6 @@
+.light-mode-icon {
+  cursor: pointer;
+  &:hover {
+    stroke: var(--gray-300);
+  }
+}

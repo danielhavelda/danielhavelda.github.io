@@ -1,0 +1,15 @@
+@import '../../styles/custom/variables.scss';
+
+.header {
+  padding: 48px 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: $breakpoint__sm) {
+  .header {
+    padding: 24px;
+  }
+}

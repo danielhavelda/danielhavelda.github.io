@@ -1,0 +1,26 @@
+@import "../../styles/custom/variables.scss";
+
+.footer {
+  padding: 28px 0;
+  font-size: 14px;
+
+  a {
+    letter-spacing: 1px;
+    &:hover {
+      color: var(--gray-300);
+    }
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: $breakpoint__md) {
+  .footer {
+    padding: 25px;
+  }
+}

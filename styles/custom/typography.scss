@@ -1,0 +1,23 @@
+h1 {
+  font: 700 normal 4.5rem "Karla", sans-serif;
+  letter-spacing: -1.25px;
+  margin-bottom: 25px;
+
+  &.bg-image__pink-to-purple { background-image: var(--gradient-pink-to-purple); }
+}
+
+h3 {
+  line-height: 1.5;
+  font: 500 normal 2rem "Karla", sans-serif;
+  margin-bottom: 25px;
+
+  &.hero-heading {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: $breakpoint__sm) {
+  h3.hero-heading {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+.navigation {
+  margin-left: auto;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.navigation ul li:not(:last-of-type) {
+  margin-right: 64px;
+}
+
+.navigation ul li a {
+  font-size: 18px;
+}
+
+.navigation ul li a:hover {
+  color: #929292;
+}

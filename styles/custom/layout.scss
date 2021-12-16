@@ -1,5 +1,41 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  z-index: 10;
+  position: relative;
+}
+
+.flex-container > main {
+  flex: 1;
+}
+
 .container {
   width: 1120px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: $breakpoint__xl) {
+  .container {
+    width: 940px;
+  }
+}
+
+@media (max-width: $breakpoint__lg) {
+  .container {
+    width: 740px;
+  }
+}
+
+@media (max-width: $breakpoint__md) {
+  .container {
+    width: 560px;
+  }
+}
+
+@media (max-width: $breakpoint__sm) {
+  .container {
+    width: 100%;
+  }
 }
