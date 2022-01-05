@@ -11,8 +11,8 @@ export default function Navigation(props) {
           </Link>
         </li>
         <li>
-          <Link href="#">
-            <a className='font-medium text-gray-300'>Rólam</a>
+          <Link href="/about-me">
+            <a className='font-medium text-gray-300'>Bemutatkozás</a>
           </Link>
         </li>
       </ul>

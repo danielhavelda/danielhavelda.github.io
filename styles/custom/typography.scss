@@ -14,14 +14,43 @@ h3 {
   &.hero-heading {
     max-width: 75%;
   }
+
+  &.section-heading {
+    font-size: 36px;
+    margin-top: 50px;
+    letter-spacing: 3px;
+    &:after {
+      position: absolute;
+      left: calc(100% + 25px);
+      top: 50%;
+      content: '';
+      width: calc(780px - 100%);
+      height: 2px;
+      background: var(--gradient-pink-to-purple);
+    }
+  }
 }
 
 p {
   font: 400 normal 1.125rem/1.85 "Karla", sans-serif;
 }
 
+@media (max-width: $breakpoint__md) {
+  h3.section-heading {
+    &:after {
+      width: calc(560px - 100%);
+    }
+  }
+}
+
 @media (max-width: $breakpoint__sm) {
   h3.hero-heading {
     max-width: 100%;
+  }
+
+  h3.section-heading {
+    &:after {
+      display: none;
+    }
   }
 }

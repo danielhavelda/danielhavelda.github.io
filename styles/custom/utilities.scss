@@ -27,14 +27,14 @@
 .flex               { display: flex; }
 
 /* Position */
-.d-relative         { position: relative; }
-.d-absolute         { position: absolute; }
-.d-none             { position: relative; }
+.relative         { position: relative; }
+.absolute         { position: absolute; }
+.none             { position: relative; }
 
 @media (max-width: $breakpoint__sm) {
-  .d-relative__sm   { display: relative; }
-  .d-absolute__sm   { display: absolute; }
-  .d-none__sm       { display: none; }
+  .relative__sm   { display: relative; }
+  .absolute__sm   { display: absolute; }
+  .none__sm       { display: none; }
 }
 
 /* colors */
@@ -43,6 +43,8 @@
 .text-gray-500      { color: var(--gray-500); }
 .text-gray-700      { color: var(--gray-700); }
 .text-gray-800      { color: var(--gray-800); }
+
+.text-white         { color: #FFFFFF;       }
 
 .text-gradient-pink-to-purple {
   background-image: var(--gradient-pink-to-purple);
