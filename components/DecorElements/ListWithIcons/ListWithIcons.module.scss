@@ -42,3 +42,20 @@
     }
   }
 }
+
+@media (max-width: $breakpoint__sm) {
+  .list-with-icons {
+    li {
+      flex-flow: column wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 50px;
+
+      svg {
+        margin-bottom: 15px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

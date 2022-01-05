@@ -46,6 +46,8 @@ p {
 @media (max-width: $breakpoint__sm) {
   h3.hero-heading {
     max-width: 100%;
+    font-size: 1.75rem;
+    line-height: 1.75;
   }
 
   h3.section-heading {

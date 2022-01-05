@@ -36,6 +36,10 @@
 }
 
 @media (max-width: $breakpoint__sm) {
+  .flex-container > main.container {
+    padding: 80px 15px;
+  }
+
   .container {
     width: 100%;
   }

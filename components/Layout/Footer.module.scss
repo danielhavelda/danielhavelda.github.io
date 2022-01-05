@@ -24,3 +24,16 @@
     padding: 25px;
   }
 }
+
+@media (max-width: $breakpoint__sm) {
+  .footer {
+    padding: 30px 15px;
+
+    .footer-container {
+      flex-flow: column wrap;
+      > div:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
