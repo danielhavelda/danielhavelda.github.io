@@ -19,10 +19,22 @@
   }
 }
 
+@media (max-width: $breakpoint__xl) {
+  .header .container {
+    width: 940px;
+  }
+}
+
+@media (max-width: $breakpoint__lg) {
+  .header .container {
+    width: 740px;
+  }
+}
+
 @media (max-width: $breakpoint__md) {
   .header {
     .container {
-      width: 100%;
+      width: 560px;
 
       > a, svg {
         z-index: 999;
@@ -35,6 +47,7 @@
   .header {
     padding: 25px 15px;
     .container {
+      width: 100%;
       > a:first-of-type { margin-left: -10px; }
     }
   }
