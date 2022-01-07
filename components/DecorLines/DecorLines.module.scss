@@ -1,3 +1,5 @@
+@import '../../styles/custom/variables.scss';
+
 .decor-lines {
   z-index: 1;
   position: fixed;
@@ -5,24 +7,25 @@
   height: 100%;
   left: 0;
   top: 0;
+
+  .line {
+    height: 100%;
+    width: 1px;
+    background: #242424;
+    position: absolute;
+    top: 0;
+    &:nth-of-type(1) { left: 33%; }
+    &:nth-of-type(2) { left: 66%; }
+    &:nth-of-type(3) { left: 80%; }
+  }
 }
 
-.decor-lines .line {
-  height: 100%;
-  width: 1px;
-  background: #242424;
-  position: absolute;
-  top: 0;
-}
-
-.decor-lines .line:nth-of-type(1) {
-  left: 33%;
-}
-
-.decor-lines .line:nth-of-type(2) {
-  left: 66%;
-}
-
-.decor-lines .line:nth-of-type(3) {
-  left: 80%;
+@media (max-width: $breakpoint__sm) {
+  .decor-lines {
+    .line {
+      &:nth-of-type(1) { left: 13%; }
+      &:nth-of-type(2) { left: 40%; }
+      &:nth-of-type(3) { left: 70%; }
+    }
+  }
 }
