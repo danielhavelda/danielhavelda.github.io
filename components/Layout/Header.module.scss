@@ -2,14 +2,40 @@
 
 .header {
   padding: 48px 0;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  width: 100%;
+  
+  > .container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 1120px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $breakpoint__md) {
+  .header {
+    .container {
+      width: 100%;
+
+      > a, svg {
+        z-index: 999;
+      }
+    }
+  }
 }
 
 @media (max-width: $breakpoint__sm) {
   .header {
-    padding: 30px 15px;
+    padding: 25px 15px;
+    .container {
+      > a:first-of-type { margin-left: -10px; }
+    }
   }
 }

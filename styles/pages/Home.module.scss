@@ -1,9 +1,5 @@
 @import '../custom/variables.scss';
 
-.homepage__main > main {
-  padding: 120px 0;
-}
-
 @media (max-width: $breakpoint__sm) {
   .homepage__main > main {
     padding: 80px 25px 60px;

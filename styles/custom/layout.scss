@@ -7,7 +7,7 @@
 }
 
 .flex-container > main {
-  padding: 120px 0;
+  padding: 250px 0;
   flex: 1;
 }
 
@@ -37,7 +37,7 @@
 
 @media (max-width: $breakpoint__sm) {
   .flex-container > main.container {
-    padding: 80px 15px;
+    padding: 160px 15px 80px;
   }
 
   .container {
