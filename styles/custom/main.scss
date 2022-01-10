@@ -28,3 +28,12 @@
   right: 16px;
   bottom: 16px;
 }
+
+.intersection-observer-pointer {
+  position: 'absolute';
+  top: '150px';
+  right: '50%';
+  height: '1px';
+  width: '1px';
+  background: 'transparent';
+}

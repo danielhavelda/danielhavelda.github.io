@@ -8,6 +8,10 @@
   width: 100%;
   z-index: 999;
   width: 100%;
+
+  &.is-scrolled {
+    background-color: rgba(23, 23, 26, 0.97);
+  }
   
   > .container {
     display: flex;

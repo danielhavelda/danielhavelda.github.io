@@ -7,9 +7,11 @@ import Link from 'next/link';
 export default function Header(props) {
   const router = useRouter();
 
+  const { status } = props;
+
   useEffect(() => console.log(router.pathname));
   return (
-    <header className={classes['header']}>
+    <header className={status ? [classes['header'], classes['is-scrolled']].join(' ') : classes['header'] }>
       <div className={classes["container"]}>
         {
           router.pathname !== '/' && 
