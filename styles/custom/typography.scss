@@ -3,16 +3,17 @@ h1 {
   letter-spacing: -1.25px;
   margin-bottom: 25px;
 
-  &.bg-image__pink-to-purple { background-image: var(--gradient-pink-to-purple); }
+  &.bg-image__pink-to-purple { background-image: var(--primary-gradient); }
 }
 
 h3 {
-  line-height: 1.5;
-  font: 500 normal 2rem "Karla", sans-serif;
+  font: 500 normal 2rem/1.65 "Karla", sans-serif;
   margin-bottom: 25px;
 
   &.hero-heading {
     max-width: 75%;
+    color: var(--h3-heading-color);
+    line-height: 1.6;
   }
 
   &.section-heading {
@@ -26,13 +27,13 @@ h3 {
       content: '';
       width: calc(780px - 100%);
       height: 2px;
-      background: var(--gradient-pink-to-purple);
+      background: var(--primary-gradient);
     }
   }
 }
 
 p {
-  font: 400 normal 1.125rem/1.85 "Karla", sans-serif;
+  font: 400 normal 1.125rem/2.15 "Karla", sans-serif;
 }
 
 @media (max-width: $breakpoint__md) {
