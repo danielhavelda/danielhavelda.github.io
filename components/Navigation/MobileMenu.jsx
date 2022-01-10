@@ -7,7 +7,7 @@ const MobileMenu = ({ navigationSection }) => {
 
   return (
     <div className={classes["mobile-menu"]}>
-      <div className={classes['test-btn']} onClick={() => setNavDisplay((prev) => !prev)}>
+      <div className={classes['mobile-menu-icon']} onClick={() => setNavDisplay((prev) => !prev)}>
         <span className={classes['line']}></span>
         <span className={classes['line']}></span>
         <span className={classes['line']}></span>

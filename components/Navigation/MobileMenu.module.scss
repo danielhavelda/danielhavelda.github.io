@@ -1,7 +1,9 @@
+@import "../../styles/custom/variables.scss";
+
 .mobile-menu {
   width: 100%;
 
-  .test-btn {
+  .mobile-menu-icon {
     width: 20px;
     height: 8px;
     position: relative;
@@ -51,5 +53,21 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: $breakpoint__md) {
+  .mobile-menu {
+    .navigation-section > ul {
+      max-width: 560px;
+      width: 100%;
+      margin: 140px auto 0;  
+    }
+  }
+}
+
+@media (max-width: $breakpoint__sm) {
+  .mobile-menu .navigation-section > ul {
+    margin: 120px auto 0;
   }
 }
