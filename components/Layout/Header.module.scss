@@ -10,7 +10,7 @@
   width: 100%;
 
   &.is-scrolled {
-    background-color: rgba(23, 23, 26, 0.97);
+    background-color: var(--header-intersection-active-bg);
   }
   
   > .container {

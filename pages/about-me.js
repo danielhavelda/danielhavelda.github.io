@@ -41,7 +41,7 @@ export default function AboutMe() {
   const contactBlockContent = (
     <>
     <h2 className="text-gray-300 font-bold relative">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia asperiores incidunt voluptate numquam, <a href="#" className="contact-link clipped-text text-gradient-pink-to-purple">lorem, ipsum</a>.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia asperiores incidunt voluptate numquam, <a href="#" className="contact-link clipped-text text-primary-gradient">lorem, ipsum</a>.
     </h2>
     <span className="contact-emoji">👋</span>
     </>
@@ -120,7 +120,7 @@ export default function AboutMe() {
     <>
 
       <h1 className="inline-block relative clipped-text bg-image__pink-to-purple">Lorem Ipsum.</h1>
-      <h3 className="hero-heading text-white">
+      <h3 className="hero-heading">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla pariatur asperiores labore quibusdam.
       </h3>
 
@@ -138,11 +138,11 @@ export default function AboutMe() {
         quo sed ipsa molestias eius quisquam expedita eum.
       </p>
 
-      <h3 className="inline-block relative lowercase clipped-text text-gradient-pink-to-purple test-h1 section-heading">Kompetenciák</h3>
+      <h3 className="inline-block relative lowercase clipped-text text-primary-gradient test-h1 section-heading">Kompetenciák</h3>
       <ThreePartList list={list} />
 
 
-      <h3 className="inline-block relative lowercase clipped-text text-gradient-pink-to-purple test-h1 section-heading">Tapasztalatok</h3>
+      <h3 className="inline-block relative lowercase clipped-text text-primary-gradient test-h1 section-heading">Tapasztalatok</h3>
       <TimeLine timelineData={timelineData} />
 
       <ContactBlock>

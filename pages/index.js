@@ -12,8 +12,8 @@ export default function Home() {
   const homeContent = (
     <>
       <h1 className="inline-block relative lowercase clipped-text bg-image__pink-to-purple">Hello World.</h1>
-        <h3 className="hero-heading text-gray-300" style={{ fontSize: '26px', lineHeight: 1.6 }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ullam nisi esse iusto <a href="/about-me" className="clipped-text text-gradient-pink-to-purple font-bold">harum</a> veniam <a href="#" className="clipped-text text-gradient-pink-to-purple font-bold">recusandae</a> sunt inventore repellat rerum.
+        <h3 className="hero-heading text-gray-300">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ullam nisi esse iusto <a href="/about-me" className="clipped-text text-primary-gradient font-bold">harum</a> veniam <a href="#" className="clipped-text text-primary-gradient font-bold">recusandae</a> sunt inventore repellat rerum.
         </h3>
     </>
   );
