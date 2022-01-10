@@ -14,7 +14,7 @@
   list-style: none;
 
   li {
-    color: white;
+    color: var(--competency-list-color);
     &:not(:last-of-type) { margin: 0 0 35px 0; }
   }    
 }

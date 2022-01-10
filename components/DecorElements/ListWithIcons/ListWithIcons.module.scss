@@ -17,10 +17,14 @@
     }
   
     svg {
-      stroke: #728dd5;
+      stroke: var(--list-with-icons-color);
       width: 16px;
       height: 16px;
       margin-right: 15px;
+    }
+
+    a {
+      color: var(--list-element-color);
     }
   }
 }
