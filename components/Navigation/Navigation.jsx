@@ -24,7 +24,7 @@ export default function Navigation(props) {
   return (
       <nav className={classes['navigation']}>
         {
-          screenWidth > 768 ? navigationContent : <MobileMenu navigationSection={navigationContent}/>
+          screenWidth > 768 ? navigationContent : <MobileMenu navigationSection={navigationContent} changeBodyOverflowFn={props.changeBodyOverflowFn}/>
         }
       </nav>
   );

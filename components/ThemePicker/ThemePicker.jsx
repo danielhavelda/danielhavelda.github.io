@@ -1,17 +1,13 @@
 import { useContext } from 'react';
 import { Sun, Moon } from 'react-feather';
-import ThemeContext from '../../context/ThemeContext';
+import GlobalContext from '../../context/GlobalContext';
 import classes from './ThemePicker.module.scss';
 
 export default function ThemePicker(props) {
-  const currentTheme = useContext(ThemeContext);
+  const { currentTheme } = useContext(GlobalContext);
 
   function setCurrentTheme() {
-    if (currentTheme === 'dark') {
-      props.changeThemeFn('light');
-    } else {
-      props.changeThemeFn('dark');
-    }
+    currentTheme === 'dark' ? props.changeThemeFn('light') : props.changeThemeFn('dark');
   }
 
   return (

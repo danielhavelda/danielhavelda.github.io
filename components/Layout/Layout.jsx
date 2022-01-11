@@ -6,7 +6,7 @@ import Navigation from '../Navigation/Navigation';
 import { useInView } from 'react-intersection-observer';
 import { useState, useEffect } from 'react';
 import ThemePicker from '../ThemePicker/ThemePicker';
-import ThemeContext from '../../context/ThemeContext';
+import GlobalContext from '../../context/GlobalContext';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
 export default function Layout(props) {
@@ -17,24 +17,29 @@ export default function Layout(props) {
   const { ref, inView, entry } = useInView(intersectionObserverOptions);
   const [isScrolled, setIsScrolled] = useState(false);
   const [theme, setTheme] = useLocalStorage('theme', 'dark');
+  const [bodyOverflowStatus, setBodyOverflowStatus] = useLocalStorage('overflow', true);
 
   useEffect(() => {
     setIsScrolled(!isScrolled)
   }, [inView]);
 
   useEffect(() => {
-    theme === 'dark' ? document.querySelector('body').classList = 'dark-theme' : document.querySelector('body').classList.remove('dark-theme');
+    theme === 'dark' ? document.querySelector('body').classList.add('dark-theme') : document.querySelector('body').classList.remove('dark-theme');
   }, [theme]);
+
+  useEffect(() => {
+    bodyOverflowStatus ? document.querySelector('body').classList.remove('overflow-hidden') : document.querySelector('body').classList.add('overflow-hidden');
+  }, [bodyOverflowStatus]);
 
   return (
     <>
-      <ThemeContext.Provider value={theme}>
+      <GlobalContext.Provider value={{ currentTheme: theme, bodyOverflow: bodyOverflowStatus }}>
         <DecorLines />
 
         <div className={['flex-container', [props.containerClass]].join(' ')}>
           <Header status={isScrolled}>
             <ThemePicker changeThemeFn={setTheme} />
-            <Navigation />
+            <Navigation changeBodyOverflowFn={setBodyOverflowStatus} />
           </Header>
 
 
@@ -47,7 +52,7 @@ export default function Layout(props) {
 
           <Footer />
         </div>
-      </ThemeContext.Provider>
+      </GlobalContext.Provider>
     </>
 
   );
