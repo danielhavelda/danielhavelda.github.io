@@ -17,7 +17,7 @@ export default function Layout(props) {
   const { ref, inView, entry } = useInView(intersectionObserverOptions);
   const [isScrolled, setIsScrolled] = useState(false);
   const [theme, setTheme] = useLocalStorage('theme', 'dark');
-  const [bodyOverflowStatus, setBodyOverflowStatus] = useLocalStorage('overflow', true);
+  const [bodyOverflowStatus, setBodyOverflowStatus] = useState(true);
 
   useEffect(() => {
     setIsScrolled(!isScrolled)
