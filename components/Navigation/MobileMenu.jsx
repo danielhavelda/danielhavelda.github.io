@@ -1,6 +1,7 @@
 import classes from './MobileMenu.module.scss';
 import { useState } from 'react';
 import DecorLines from '../DecorLines/DecorLines';
+import { GitHub, Send } from 'react-feather';
 
 const MobileMenu = ({ navigationSection, changeBodyOverflowFn }) => {
   const [navDisplay, setNavDisplay] = useState(false);
@@ -23,6 +24,19 @@ const MobileMenu = ({ navigationSection, changeBodyOverflowFn }) => {
       >
         <DecorLines />
         {navigationSection}
+        <div className={classes['social-section']}>
+          <div className='flex align-items-start space-between'>
+            <div className={classes['social-block']}>
+              <a href="#"></a>
+              <Send width={36} height={36} strokeWidth={1} />
+            </div>
+
+            <div className={classes['social-block']}>
+              <a href="#"></a>
+              <GitHub width={36} height={36} strokeWidth={1}/>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

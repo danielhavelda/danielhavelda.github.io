@@ -20,6 +20,8 @@
   --competency-list-color: #000;
 
   --mobile-navigation-bg: var(--background-primary);
+
+  --navigation-test-block-bg: #f3f3f3;
 }
 
 body.dark-theme {
@@ -44,4 +46,6 @@ body.dark-theme {
   --competency-list-color: #fff;
 
   --mobile-navigation-bg: #16171a;
+
+  --navigation-test-block-bg: #141518;
 }
