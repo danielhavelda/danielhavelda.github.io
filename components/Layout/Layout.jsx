@@ -8,16 +8,18 @@ import { useState, useEffect } from 'react';
 import ThemePicker from '../ThemePicker/ThemePicker';
 import GlobalContext from '../../context/GlobalContext';
 import useLocalStorage from '../../hooks/useLocalStorage';
+import useWindowSize from '../../hooks/useWindowSize';
+
+const intersectionObserverOptions = {
+  rootMargin: '0px',
+};
 
 export default function Layout(props) {
-  const intersectionObserverOptions = {
-    rootMargin: '0px',
-  };
-  
   const { ref, inView, entry } = useInView(intersectionObserverOptions);
   const [isScrolled, setIsScrolled] = useState(false);
   const [theme, setTheme] = useLocalStorage('theme', 'dark');
   const [bodyOverflowStatus, setBodyOverflowStatus] = useState(true);
+  const [screenWidth, screenHeight] = useWindowSize(500); 
 
   useEffect(() => {
     setIsScrolled(!isScrolled)
@@ -31,9 +33,16 @@ export default function Layout(props) {
     bodyOverflowStatus ? document.querySelector('body').classList.remove('overflow-hidden') : document.querySelector('body').classList.add('overflow-hidden');
   }, [bodyOverflowStatus]);
 
+  useEffect(() => {
+    if (screenWidth > 768) {
+      document.querySelector('body').classList.remove('overflow-hidden');
+      setBodyOverflowStatus(true);
+    }
+  }, [screenWidth]);
+
   return (
     <>
-      <GlobalContext.Provider value={{ currentTheme: theme, bodyOverflow: bodyOverflowStatus }}>
+      <GlobalContext.Provider value={{ currentTheme: theme, screen: { width: screenWidth, height: screenHeight }}}>
         <DecorLines />
 
         <div className={['flex-container', [props.containerClass]].join(' ')}>

@@ -1,11 +1,12 @@
 import classes from './Navigation.module.scss';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
-import useWindowSize from '../../hooks/useWindowSize';
+import GlobalContext from '../../context/GlobalContext';
+import { useContext } from 'react';
 
 export default function Navigation(props) {
-  const [screenWidth, screenHeight] = useWindowSize(500);
-
+  const { screen: { width } } = useContext(GlobalContext);
+  
   const navigationContent = (
     <ul>
       <li>
@@ -24,7 +25,7 @@ export default function Navigation(props) {
   return (
       <nav className={classes['navigation']}>
         {
-          screenWidth > 768 ? navigationContent : <MobileMenu navigationSection={navigationContent} changeBodyOverflowFn={props.changeBodyOverflowFn}/>
+          width > 768 ? navigationContent : <MobileMenu navigationSection={navigationContent} changeBodyOverflowFn={props.changeBodyOverflowFn}/>
         }
       </nav>
   );
